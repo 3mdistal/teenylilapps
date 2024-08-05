@@ -37,3 +37,7 @@ next-env.d.ts
 # AI
 **/.aidigestignore
 **/.cursorignore
+
+## Panda
+styled-system
+styled-system-studio

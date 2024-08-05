@@ -1,19 +1,11 @@
-@import "open-props/normalize";
+@layer reset, base, tokens, recipes, utilities;
+
 @import "open-props/style";
-
-@layer base {
-}
-
-@layer theme {
-}
 
 @layer components {
   :root {
     --menu-height: var(--size-10);
   }
-}
-
-@layer utilities {
 }
 
 @layer styles {

@@ -11,6 +11,7 @@
     "lint": "next lint",
     "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
     "migrate:create": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload migrate:create",
+    "prepare": "panda codegen",
     "test": "playwright test",
     "vercel": "vercel"
   },
@@ -35,6 +36,7 @@
     "sharp": "^0.33.4"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.44.0",
     "@playwright/test": "^1.45.3",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
