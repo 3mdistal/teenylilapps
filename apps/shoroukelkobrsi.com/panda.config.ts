@@ -12,6 +12,12 @@ export default defineConfig({
   // Whether to use css reset
   preflight: true,
 
+  // Enforce real CSS values
+  strictPropertyValues: true,
+
+  // Enforce design system tokens
+  strictTokens: true,
+
   // Where to look for your css declarations
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
 
