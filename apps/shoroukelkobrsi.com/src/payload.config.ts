@@ -1,5 +1,5 @@
 import { postgresAdapter } from "@payloadcms/db-postgres";
-import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
+import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { resendAdapter } from "@payloadcms/email-resend";
 import { buildConfig, type EmailAdapter } from "payload";
@@ -35,13 +35,14 @@ export default buildConfig({
     process.env.VERCEL_ENV === "production" ||
     process.env.VERCEL_ENV === "preview"
       ? [
-          vercelBlobStorage({
-            access: "public",
-            addRandomSuffix: true,
+          uploadthingStorage({
             collections: {
               [Media.slug]: true,
             },
-            token: process.env.BLOB_READ_WRITE_TOKEN ?? "",
+            options: {
+              apiKey: process.env.UPLOADTHING_SECRET,
+              acl: "public-read",
+            },
           }),
         ]
       : [],
