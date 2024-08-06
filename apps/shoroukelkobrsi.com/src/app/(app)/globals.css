@@ -1,15 +1,1 @@
 @layer reset, base, tokens, recipes, utilities;
-
-@import "open-props/style";
-
-@layer components {
-  :root {
-    --menu-height: var(--size-10);
-  }
-}
-
-@layer styles {
-  body {
-    height: 200lvh;
-  }
-}

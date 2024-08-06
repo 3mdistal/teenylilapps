@@ -5,10 +5,9 @@ const reelStyle = css({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  marginTop: "[calc(var(--menu-height) * -1)]",
-  background: "var(--gray-12)",
+  background: "neutral.900",
   width: "full",
-  height: "[100dvh]",
+  height: "dvh",
 });
 
 const reelInnerStyle = css({
